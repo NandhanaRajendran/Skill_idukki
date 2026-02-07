@@ -7,30 +7,33 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100 flex">
+<body class="bg-gray-100 flex flex-col md:flex-row">
 
   <!-- Sidebar -->
-  <aside class="w-60 h-screen bg-white shadow-md p-6">
-    <nav class="space-y-6 text-gray-700">
+  <aside class="w-full md:w-60 h-auto md:h-screen bg-white shadow-md p-6 flex md:block justify-center md:justify-start">
+    <nav class="space-y-3 md:space-y-6 text-gray-700 flex md:block gap-6 md:gap-0 text-sm md:text-base">
       <a class="flex items-center space-x-3" href="#"><span>🏠</span><span>Home</span></a>
       <a class="flex items-center space-x-3" href="#"><span>⏳</span><span>History</span></a>
       <a class="flex items-center space-x-3" href="#"><span>📃</span><span>Playlist</span></a>
       <a class="flex items-center space-x-3" href="#"><span>⏱️</span><span>Watch Later</span></a>
-      <a class="flex items-center space-x-3" href="#"><span>💬</span><span>Community chat</span></a>
+      <a class="flex items-center space-x-3" href="#"><span>💬</span><span>Community Chat</span></a>
     </nav>
   </aside>
 
   <!-- Main Content -->
-  <main class="flex-1 p-6">
+  <main class="flex-1 p-4 md:p-6">
 
     <!-- Header -->
-    <header class="text-center text-white bg-purple-900 py-4 text-3xl font-bold rounded-md">
+    <header class="text-center text-white bg-purple-900 py-3 text-2xl md:text-3xl font-bold rounded-md">
       Skill Idukki
     </header>
 
     <!-- Filter + Search -->
-    <div class="flex items-center space-x-4 mt-6">
-      <button class="px-6 py-2 bg-gray-200 rounded-md font-medium">All</button>
+    <div class="flex flex-col md:flex-row items-center md:space-x-4 mt-6 gap-4">
+
+      <button class="px-6 py-2 bg-gray-200 rounded-md font-medium w-full md:w-auto">
+        All
+      </button>
 
       <div class="flex items-center bg-gray-200 px-4 py-2 rounded-md w-full max-w-xl">
         <span>🔍</span>
@@ -42,11 +45,13 @@
         />
       </div>
 
-      <button class="bg-gray-200 p-3 rounded-full">🎤</button>
+      <button class="bg-gray-200 p-3 rounded-full">
+        🎤
+      </button>
     </div>
 
     <!-- Grid -->
-    <section id="videoGrid" class="grid grid-cols-3 gap-6 mt-8">
+    <section id="videoGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
 
       <!-- Farming -->
       <div class="skill-box" data-name="Farming">
